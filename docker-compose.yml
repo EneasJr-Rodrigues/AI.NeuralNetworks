@@ -1,0 +1,17 @@
+version: '3'
+services:
+  nvidia_neural_networks:
+    build:
+      args:    
+        base_image: tensorflow/tensorflow:nightly-jupyter
+        command: nvidia-smi
+        container_name: nvidia_neural_networks
+    image: eneasjr/nvidia_neural_networks:v1.0   
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+        
