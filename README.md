@@ -1,4 +1,4 @@
-## MedRoom.AI.TensorflowGpu - Nvidia_Tensorflow:v1.0
+## AI.TensorflowGpu - nvidia_neural_networks:v1.0
 
 [![Python required version: 3.11.4](https://img.shields.io/badge/python-3.11.4-blue.svg?style=flat-square)](https://www.python.org/downloads/release/python-3114)
 
@@ -12,7 +12,7 @@
 
 **`Documentation`** |
 ------------------- |
-[![Documentation](https://img.shields.io/badge/api-reference-blue.svg)](https://hub.docker.com/r/eneasjr/nvidia_tensorflow) |
+[![Documentation](https://img.shields.io/badge/api-reference-blue.svg)](https://hub.docker.com/r/eneasjr/nvidia_neural_networks) |
 
 ## install
 
@@ -23,32 +23,32 @@
 ## ⚠️ Get Started
 
 ```
-docker pull eneasjr/nvidia_tensorflow:v1.0
+docker pull eneasjr/nvidia_neural_networks:v1.0
 ```
 
 ## Run System
 
 ```shell
-docker run -it -p 8888:8888 eneasjr/nvidia_tensorflow:v1.0
+docker run -it -p 8888:8888 eneasjr/nvidia_neural_networks:v1.0
 ```
 
 ## Stop System
 
 ```shell
-docker stop eneasjr/nvidia_tensorflow:v1.0
+docker stop eneasjr/nvidia_neural_networks:v1.0
 ```
 
 ## Others Tests
 
 ```shell
-docker run -t -i --privileged eneasjr/nvidia_tensorflow:v1.0 bash
-docker run -it --name eneasjr/nvidia_tensorflow:v1.0 --gpus all -p 3000:3000 eneasjr/nvidia_tensorflow
-docker run --gpus all eneasjr/nvidia_tensorflow:v1.0 nvidia-smi
-docker run -it --rm eneasjr/nvidia_tensorflow:v1.0 \
+docker run -t -i --privileged eneasjr/nvidia_neural_networks:v1.0 bash
+docker run -it --name eneasjr/nvidia_neural_networks:v1.0 --gpus all -p 3000:3000 eneasjr/nvidia_neural_networks
+docker run --gpus all eneasjr/nvidia_neural_networks:v1.0 nvidia-smi
+docker run -it --rm eneasjr/nvidia_neural_networks:v1.0 \
    python -c "import tensorflow as tf; print(tf.reduce_sum(tf.random.normal([1000, 1000])))"
-docker run -it -p 8888:8888 nvidia_tensorflow:v1.0
-docker run --gpus all --rm eneasjr/nvidia_tensorflow:v1.0 nvidia-smi
-docker run -it -p 8888:8888 eneasjr/nvidia_tensorflow:v1.0
+docker run -it -p 8888:8888 nvidia_neural_networks:v1.0
+docker run --gpus all --rm eneasjr/nvidia_neural_networks:v1.0 nvidia-smi
+docker run -it -p 8888:8888 eneasjr/nvidia_neural_networks:v1.0
 ```
 
 * Stop and remove all containers
