@@ -3,10 +3,13 @@
 repository=eneasjr
 IMAGE=nvidia_neural_networks
 VERSION=v1.0
+IMAGE_ID=93758735b44e
 
 echo "build image docker"
 echo "========================================================================================="
 # run docker build
+echo "docker registry tags"
+docker tag ${IMAGE_ID} ${repository}/${IMAGE}:${VERSION}
 docker compose build
 echo "========================================================================================="
 echo "push image docker in docker hub"
